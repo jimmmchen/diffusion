@@ -16,7 +16,7 @@ def main(model_config = None):
         "multiplier": 2.,
         "beta_1": 1e-4,
         "beta_T": 0.02,
-        "img_size": 64,
+        "img_size": 16 * 1024,
         "grad_clip": 1.,
         "device": "cuda",
         "training_load_weight": "ckpt_150_1.pt",
