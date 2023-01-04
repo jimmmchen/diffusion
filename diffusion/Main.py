@@ -3,7 +3,7 @@ from Diffusion.Train import train, eval
 
 def main(model_config = None):
     modelConfig = {
-        "state": "eval", # or eval
+        "state": "train", # or eval
         "epoch": 200,
         "batch_size": 20,
         "T": 1000,
@@ -12,7 +12,7 @@ def main(model_config = None):
         "attn": [2],
         "num_res_blocks": 2,
         "dropout": 0.15,
-        "lr": 1e-5,
+        "lr": 1e-4,
         "multiplier": 2.,
         "beta_1": 1e-4,
         "beta_T": 0.02,
@@ -24,7 +24,6 @@ def main(model_config = None):
         "test_load_weight": "ckpt_570_.pt",
         "sampled_dir": "./SampledImgs/",
         "sampledNoisyImgName": "NoisyNoGuidenceImgs.png",
-        "sampledImgName": "SampledNoGuidenceImgs.png",
         "nrow": 8
         }
     if model_config is not None:
